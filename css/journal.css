@@ -1,6 +1,7 @@
 body { 
     background-color: #E5F9E0;
     font-family: Tahoma, Geneva, sans-serif;
+    padding-bottom: 15px;
 }
 #container {
     width: 100%;
@@ -67,3 +68,4 @@ a:link {
 a:visited {
     color: #30323D;
 }
+
