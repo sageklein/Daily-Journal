@@ -1,0 +1,1 @@
+api.getJournalEntry().then(data => injectDOM.addToDOM(data))
