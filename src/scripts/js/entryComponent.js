@@ -1,5 +1,5 @@
-const webComponent = {
-
+const webComponent = 
+{
     makeJournalEntryComponent: (journalEntry) => {
         return `
         <article>
@@ -8,6 +8,5 @@ const webComponent = {
             <p>Entry: ${journalEntry.entry}</p>
             <p>Mood: ${journalEntry.mood}</p>  
         </article>
-   
-     `}
-    }
+     `},
+}
