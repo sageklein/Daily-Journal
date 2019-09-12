@@ -1,6 +1,6 @@
 const webComponent = 
 {
-    makeJournalEntryComponent: (journalEntry) => {
+    makeJournalEntry: (journalEntry) => {
         return `
         <article>
             <p>Date: ${journalEntry.date}</p>

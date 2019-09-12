@@ -41,7 +41,7 @@ input, select {
     width: 50%;
     height: 25px;
 }
-.record-button {
+#entry-btn{
     background-color: #FFF0EF;
     border-color: #FFF0EF;
     display: flex;
@@ -55,7 +55,7 @@ input, select {
     padding: 15px;
     float: right;
 }
-.buttonhole {
+.entry-btn {
 width: 840px;
 margin: 20px auto;
 }
