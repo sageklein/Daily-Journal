@@ -15,6 +15,14 @@ form {
     width: 840px;
     padding: 1px 0px;
 }
+.donut {   
+    background: #FFF0EF; 
+    outline-offset: 2px;
+    border-radius: 0px;
+    margin: 0px auto;
+    width: 840px;
+    padding: 1px 0px;
+}
 h1 {
     padding-left: 15px;
     text-transform: uppercase;

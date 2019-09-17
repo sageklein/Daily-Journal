@@ -1,6 +1,6 @@
 //Function that builds the entry
 const createEntry = (date, concepts, entry, mood) => {
-    const newDonut = {
+    const newEntry = {
         date: date,
         concepts: concepts,
         entry: entry,

@@ -1,6 +1,6 @@
 const API = {
 
-    entries: () => {
+    getEntries: () => {
         return fetch("http://localhost:8088/entries")
         .then(entries => entries.json())
     },  
@@ -12,7 +12,7 @@ const API = {
 		});
     },
     
-	deleteJournalEntry: entryId => {
+	deleteEntry: entryId => {
         return fetch(`http://localhost:8088/entries/${entryId}`, 
         {method: "DELETE"})
         .then(response => response.json());

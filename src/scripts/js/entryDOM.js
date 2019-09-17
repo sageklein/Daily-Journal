@@ -1,11 +1,12 @@
 import entryHTML from "./entryHTML.js"
 
-/*
-  Put entries on the DOM
-*/
-
-const entryDOM = (entryObj) => {
-    document.querySelector("#entry--container").innerHTML += entryHTML(entryObj)
+const injectDOM = {
+    
+    addEntryToDOM: function (entry){
+            const journalContainer = document.querySelector("#entry--container");
+            journalContainer.innerHTML += entryHTML(entry);
+    }
 }
 
-export default entryDOM
+export default injectDOM
+
