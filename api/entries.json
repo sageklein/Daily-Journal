@@ -1,25 +1,18 @@
 {
   "entries": [
     {
-      "concept": "Array methods",
-      "date": "07/24/2018",
-      "entry": "We learned about forEach and it made sense",
-      "mood": "Ok",
-      "id": 1
-    },
-    {
-      "date": "",
-      "concepts": "",
-      "entry": " ",
+      "date": "2019-09-17",
+      "concepts": "Making a Save Button!",
+      "entry": "I learned how to make a Save Button!",
       "mood": "HAPPY",
-      "id": 2
+      "id": 5
     },
     {
-      "date": "2019-09-13",
-      "concepts": "ergwe",
-      "entry": " ewrgt",
-      "mood": "SCARED",
-      "id": 3
+      "date": "2019-09-17",
+      "concepts": "How to do Javascript",
+      "entry": " I should know this by nooooooow.",
+      "mood": "NERVOUS",
+      "id": 6
     }
   ]
 }

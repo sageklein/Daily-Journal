@@ -1,9 +1,8 @@
-import entryHTML from "./entryHTML.js"
+import entryHTML from "./entryHTML.js";
 
-let injectDOM= (entry) => {
-            const journalContainer = document.querySelector("#entry--container");
-            journalContainer.innerHTML += entryHTML(entry);
-    }
+let injectDOM = entry => {
+  const journalContainer = document.querySelector("#entry--container");
+  journalContainer.innerHTML += entryHTML(entry);
+};
 
-export default injectDOM
-
+export default injectDOM;
