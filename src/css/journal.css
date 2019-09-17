@@ -4,28 +4,52 @@ body {
     color: rgba(39, 37, 28, 0.877);
     padding-bottom: 15px;
 }
-form, .entry--container  {   
+.record-button, .card {
+    display: flex;
+    justify-content: space-between;
+    border-color: #E8C547;
+    align-content: space-around;
+    flex-grow: 2px;
+    flex-wrap: wrap;
+    max-width: 250px;
+    flex-direction: column;
+    text-align: center;
+    font-size: 15px;
+    padding: 6px;
+    display: block;
+    margin: 15px 2% 0 2%;
+}
+form {   
     background: #FFF0EF; 
     outline-offset: 2px;
     border-radius: 0px;
     margin: 0px auto;
     width: 840px;
     padding: 1px 0px;
+} 
+.entry--container , .entry {   
+    outline-offset: 2px;
+    border-radius: 0px;
+    margin: 0px auto;
+    width: 840px;
+    padding: 1px 0px;
 }
-h1 {
-    padding-left: 15px;
-    text-transform: uppercase;
-    letter-spacing: 20px;
-    text-align: center;
-    font-size: 50px;
-    color: #E8C547;
-}
-fieldset {
+fieldset, .entry {
+    background: #FFF0EF; 
     display: flex;
     flex-direction: column;
     border: none;
-    margin: 25px;
+    margin: 25px auto;
     padding: 1rem;
+}
+
+h1 {
+    padding-left: 15px;
+    text-transform: uppercase;
+    letter-spacing: 25px;
+    text-align: center;
+    font-size: 50px;
+    color: #E8C547;
 }
 textarea {
     width: 50%;
@@ -44,24 +68,7 @@ input, select {
     padding: 10px;
     margin: 20px auto;
 }
-.record-button, .card {
-    display: flex;
-    justify-content: space-between;
-    border-color: #E8C547;
-    align-content: space-around;
-    flex-grow: 2px;
-    flex-wrap: wrap;
-    max-width: 250px;
-    flex-direction: column;
-    text-align: center;
-    font-size: 15px;
-    padding: 6px;
-    display: block;
-    margin: 15px 2% 0 2%;
-}
-.date, .concepts, .entry, .mood {
-    max-width: 400px 20px;
-}
+
 a {
     text-decoration: none;
 }
@@ -71,4 +78,3 @@ a:link {
 a:visited {
     color: rgba(39, 37, 28, 0.877);
 }
-
