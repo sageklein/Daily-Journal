@@ -1,11 +1,12 @@
-import createNewEntry from "./createEntry.js";
+import createEntry from "./createEntry.js";
 import API from "./dataManager.js";
 import injectDOM from "./entryDOM.js";
+import entryHTML from "./entryHTML.js";
 
-// This makes sure we have donuts when the page loads!
+// This makes sure we have entries when the page loads
 API.getEntries().then((allEntries) => {
     allEntries.forEach(entry => {
-        injectDOM.addEntryToDOM(entry)
+        injectDOM(entry)
     })
 })
 // Event listener for the 'create new entry' button
@@ -18,33 +19,33 @@ document.querySelector("#entry-btn").addEventListener("click", () => {
     const mood = document.querySelector("#mood").value
 
     // 2. build entry object
-    const newEntryObj = createNewEntry(date, concepts, entry, mood)
+    const newEntryObj = createEntry(date, concepts, entry, mood)
     
-    // // 4. clear journal-container before adding new donut
-    // document.querySelector("#entry--container").innerHTML = "";
+    // 4. clear journal-container before adding new entry
+    document.querySelector("#entry--container").innerHTML = "";
 
     // 3. clear inputs
     document.querySelector("#entry-btn").value = "";
 
     // 5. I need to save entry to the json server
-    API.getEntries().then(data => injectDOM.addEntryToDOM((data)));
+    // API.getEntries().then(data => injectDOM((data)));
 
     // 4. clear inputs
     document.querySelector("#date, #concepts, #entry,  #mood").value = "";
 
     // 6. I need to save Entry to the DOM
-    API.getEntry(newEntryObj).then(() => {
-
-   
-           // 6. get all the entries again
-           API.getEntry().then((allEntry) => {
+    console.log(newEntryObj)
+    API.saveJournalEntry(newEntryObj).then((response) => {
+   console.log(response)
+           // 7. get all the entries again
+           API.getEntries().then((allEntry) => {
                allEntry.forEach(entry => {
-                   // 7. needs to send entry to DOM
-                   addDEntryToDOM(entry)
-               })
-           })
-   
-       })
+                   // 8. needs to send entry to DOM
+                   injectDOM(entry)
+                })
+            })
+    
+        })
     })
 
 /*
@@ -53,15 +54,16 @@ Listen for delete buttons and then get the id value of the donut from the button
 const container = document.querySelector("#entry--container").addEventListener("click", (event) => {
     if (event.target.id.startsWith("deleteEntry--")) {
          // 1. Extract entry id from the button's id attribute
-        document.querySelector("#entry--container").innerHTML = "";
+
         API.deleteEntry(event.target.id.split("--")[1])
         .then(response => {
             // 2. clear journalContainer before adding new entry
+            document.querySelector("#entry--container").innerHTML = "";
             // 3. get all the entries again
             API.getEntries().then((allEntries) => {
                 allEntries.forEach(entry => {
                     // 4. send entry to DOM
-                    addEntryToDOM(entry)
+                    injectDOM(entry)
                 })
             })
         })

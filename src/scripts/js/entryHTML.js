@@ -4,7 +4,7 @@
 
 const entryHTML = (entry) => {
     return `
-    <div class="donut">
+    <div class="entry">
     <p>Date: ${entry.date}</p>
     <p>Concept: ${entry.concept}</p>
     <p>Entry: ${entry.entry}</p>

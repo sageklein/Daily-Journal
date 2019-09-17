@@ -4,7 +4,22 @@
       "concept": "Array methods",
       "date": "07/24/2018",
       "entry": "We learned about forEach and it made sense",
-      "mood": "Ok"
+      "mood": "Ok",
+      "id": 1
+    },
+    {
+      "date": "",
+      "concepts": "",
+      "entry": " ",
+      "mood": "HAPPY",
+      "id": 2
+    },
+    {
+      "date": "2019-09-13",
+      "concepts": "ergwe",
+      "entry": " ewrgt",
+      "mood": "SCARED",
+      "id": 3
     }
   ]
 }
